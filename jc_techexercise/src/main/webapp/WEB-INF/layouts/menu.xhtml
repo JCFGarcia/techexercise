@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui" >
+
+    <script>
+        PrimeFaces.widget.Menubar.prototype.activate = function(b) {
+            this.highlight(b);
+            var a = b.children("ul.ui-menu-child");
+            if (a.length == 1) {
+                a.css('display', 'table');
+                this.showSubmenu(b, a);
+            } else {
+                b.css('display', 'table');
+            }
+        }
+    </script>
+
+    <h:form>
+        <div class="mainMenu nowrap">
+            <p:menubar>
+                <p:submenu label="Site Navigation">
+                    <p:menuitem value="Home" icon="ui-icon-home" url="helloworld.jsf"/>
+					<p:menuitem value="List" icon="ui-icon-note" url="list.jsf"/>
+                </p:submenu>
+            </p:menubar>
+        </div>
+    </h:form>
+
+</ui:composition>
