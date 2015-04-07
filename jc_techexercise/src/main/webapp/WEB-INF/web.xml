@@ -3,7 +3,7 @@
   <display-name>jc_techexercise</display-name>
   <context-param>
     <param-name>primefaces.THEME</param-name>
-    <param-value>bootstrap</param-value>
+    <param-value>sunny</param-value>
   </context-param>
   <context-param>
     <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
