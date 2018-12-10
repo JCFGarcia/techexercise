@@ -17,4 +17,8 @@ public class PrototypeBean{
     public void setTestString(String testString) {
         this.testString = testString;
     }
+    
+    public void uselessTestUpload() {
+    	//testing git commit
+    }
 }
